@@ -1,0 +1,57 @@
+/* Contenitore principale delle Flash Cards */
+.flash-cards-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 50px auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Titolo principale */
+h1 {
+  margin-bottom: 18px;
+  font-size: 32px;
+}
+
+/* Contenitore della barra di avanzamento */
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  padding: 6px;
+  margin-bottom: 20px;
+  border: 2px solid lightgray;
+  border-radius: 12px;
+}
+
+/* Barra esterna */
+.progress-bar {
+  position: relative;
+  flex: 1;
+  height: 28px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* Parte riempita della barra */
+.progress-value {
+  height: 100%;
+  background-color: lightblue;
+  border-radius: 8px;
+}
+
+/* Percentuale di avanzamento */
+.progress-percentage {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Numero della card corrente */
+.progress-count {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
