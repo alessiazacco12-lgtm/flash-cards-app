@@ -1,0 +1,33 @@
+<!-- Contenitore della singola Flash Card -->
+<div class="card">
+  <!-- FASE 1 - DOMANDA / RISPOSTA -->
+  <!-- Se showAnswer è false mostro la domanda -->
+  @if (!showAnswer()) {
+    <p class="card-text">
+      {{ question() }}
+    </p>
+  } @else {
+    <!-- Se showAnswer è true mostro la risposta -->
+    <p class="card-text">
+      {{ answer() }}
+    </p>
+  }
+
+  <!-- FASE 2 - BARRA DI NAVIGAZIONE -->
+  <div class="navigation">
+    <!-- Card precedente -->
+    <button type="button" (click)="previousCard()">‹ Previous</button>
+
+    <!-- Mostra o nasconde la risposta -->
+    <button type="button" (click)="toggleAnswer()">
+      @if (!showAnswer()) {
+        Show Answer
+      } @else {
+        Hide Answer
+      }
+    </button>
+
+    <!-- Card successiva -->
+    <button type="button" (click)="nextCard()">Next ›</button>
+  </div>
+</div>
