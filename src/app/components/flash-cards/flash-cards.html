@@ -1,0 +1,28 @@
+<!-- Contenitore principale delle Flash Cards -->
+<div class="flash-cards-container">
+  <!-- Titolo principale -->
+  <h1>Flash Cards</h1>
+
+  <!-- FASE 1 - BARRA DI AVANZAMENTO -->
+  <div class="progress-container">
+    <!-- Barra esterna -->
+    <div class="progress-bar">
+      <!-- Parte riempita della barra -->
+      <div class="progress-value" [style.width.%]="progress()"></div>
+
+      <!-- Percentuale posizionata in base al progresso -->
+      <span class="progress-percentage" [style.left.%]="progress()"> {{ progress() }}% </span>
+    </div>
+
+    <!-- Numero della card corrente -->
+    <span class="progress-count"> {{ currentIndex() + 1 }} of {{ cards.length }} </span>
+  </div>
+
+  <!-- FASE 2 - FLASH CARD CORRENTE -->
+  <app-flash-card
+    [question]="currentCard().question"
+    [answer]="currentCard().answer"
+    (previous)="previousCard()"
+    (next)="nextCard()"
+  ></app-flash-card>
+</div>
