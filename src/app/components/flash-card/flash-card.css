@@ -1,0 +1,60 @@
+/* Contenitore della singola Flash Card */
+.card {
+  width: 100%;
+  border: 2px solid lightgray;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Area in cui viene mostrata la domanda o la risposta */
+.card-text {
+  min-height: 260px;
+  margin: 8px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+
+/* Barra inferiore con Previous, Show Answer e Next */
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 8px 8px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+
+/* Pulsanti della barra */
+.navigation button {
+  padding: 14px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Previous allineato a sinistra */
+.navigation button:first-child {
+  text-align: left;
+}
+
+/* Show Answer centrato */
+.navigation button:nth-child(2) {
+  text-align: center;
+}
+
+/* Next allineato a destra */
+.navigation button:last-child {
+  text-align: right;
+}
+
+/* Effetto al passaggio del mouse */
+.navigation button:hover {
+  background-color: lightcyan;
+}
