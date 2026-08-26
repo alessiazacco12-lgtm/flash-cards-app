@@ -1,12 +1,12 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// Importo Component per creare il componente principale e poi importo il componente FlashCards.
+import { Component } from '@angular/core';
+import { FlashCards } from './components/flash-cards/flash-cards';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+
+  imports: [FlashCards],
+
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('flash-cards-app');
-}
+export class App {}
