@@ -1,8 +1,8 @@
-// Questo file contiene la logica di una singola Flash Card.
-// La flash-card è il componente figlio riutilizzabile, riceve domanda e risposta tramite input(), gestisce Show/Hide Answer con un signal e comunica al padre i click su Previous e Next tramite output().
+// Questo file contiene la logica di una singola Flash Card. La flash-card è il componente figlio riutilizzabile. Riceve l'intera card tramite input(), gestisce Show/Hide Answer con un signal e comunica al padre i click su Previous e Next tramite output().
 
-// FASE 1 - IMPORT -- Importo component, input, output e signal.
+// FASE 1 - IMPORT
 import { Component, input, output, signal } from '@angular/core';
+import { FlashCard as FlashCardData } from '../../models/flash-card';
 
 // FASE 2 - CONFIGURAZIONE DEL COMPONENTE
 @Component({
@@ -19,9 +19,9 @@ import { Component, input, output, signal } from '@angular/core';
   styleUrl: './flash-card.css',
 })
 export class FlashCard {
-  // FASE 3 - DATI RICEVUTI DAL COMPONENTE PADRE -- Ricevo la domanda della Flash Card e poi la risposta della Flash Card.
-  question = input('');
-  answer = input('');
+  // FASE 3 - DATI RICEVUTI DAL COMPONENTE PADRE
+  // Ricevo l'intera Flash Card dal componente padre.
+  card = input.required<FlashCardData>();
 
   // FASE 4 - EVENTI INVIATI AL COMPONENTE PADRE -- Comunico al componente padre quando viene premuto Previous o Next.
   previous = output<void>();
