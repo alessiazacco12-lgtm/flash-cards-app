@@ -1,15 +1,16 @@
 <!-- Contenitore della singola Flash Card -->
 <div class="card">
   <!-- FASE 1 - DOMANDA / RISPOSTA -->
+
   <!-- Se showAnswer è false mostro la domanda -->
   @if (!showAnswer()) {
     <p class="card-text">
-      {{ question() }}
+      {{ card().question }}
     </p>
   } @else {
     <!-- Se showAnswer è true mostro la risposta -->
     <p class="card-text">
-      {{ answer() }}
+      {{ card().answer }}
     </p>
   }
 
