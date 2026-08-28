@@ -9,12 +9,8 @@ import { FlashCardsService } from '../../services/flash-cards';
 // FASE 2 - CONFIGURAZIONE DEL COMPONENTE
 @Component({
   selector: 'app-flash-cards',
-
-  // Rendo disponibile il componente FlashCard nel template.
   imports: [FlashCard],
-
   templateUrl: './flash-cards.html',
-
   styleUrl: './flash-cards.css',
 })
 export class FlashCards {
