@@ -1,5 +1,5 @@
-// Questo file contiene la logica principale delle Flash Cards.
-// E' il componente padre e gestisce la card corrente, la navigazione Previous/Next e la percentuale di avanzamento usando signal e computed.
+// Questo file contiene la logica principale delle Flash Cards. E' il componente padre e gestisce la card corrente, la navigazione Previous/Next e la percentuale di avanzamento
+// usando signal e computed.
 
 // FASE 1 - IMPORT
 import { Component, computed, inject, signal } from '@angular/core';
@@ -14,6 +14,7 @@ import { FlashCardsService } from '../../services/flash-cards';
   imports: [FlashCard],
 
   templateUrl: './flash-cards.html',
+
   styleUrl: './flash-cards.css',
 })
 export class FlashCards {
@@ -36,16 +37,13 @@ export class FlashCards {
     return Math.round(((this.currentIndex() + 1) / this.cards.length) * 100);
   });
 
-  // FASE 7 - CARD SUCCESSIVA
-  nextCard() {
-    if (this.currentIndex() < this.cards.length - 1) {
+  // FASE 7 - CAMBIO CARD -- Gestisco il passaggio alla card precedente o successiva.
+  changeCard(direction: 'prev' | 'next') {
+    if (direction === 'next' && this.currentIndex() < this.cards.length - 1) {
       this.currentIndex.update((index) => index + 1);
     }
-  }
 
-  // FASE 8 - CARD PRECEDENTE
-  previousCard() {
-    if (this.currentIndex() > 0) {
+    if (direction === 'prev' && this.currentIndex() > 0) {
       this.currentIndex.update((index) => index - 1);
     }
   }
