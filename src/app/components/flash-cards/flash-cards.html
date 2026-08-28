@@ -19,9 +19,5 @@
   </div>
 
   <!-- FASE 2 - FLASH CARD CORRENTE -->
-  <app-flash-card
-    [card]="currentCard()"
-    (previous)="previousCard()"
-    (next)="nextCard()"
-  ></app-flash-card>
+  <app-flash-card [card]="currentCard()" (cardChange)="changeCard($event)"></app-flash-card>
 </div>
