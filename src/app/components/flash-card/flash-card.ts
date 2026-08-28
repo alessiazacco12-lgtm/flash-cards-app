@@ -6,16 +6,9 @@ import { FlashCard as FlashCardData } from '../../models/flash-card';
 
 // FASE 2 - CONFIGURAZIONE DEL COMPONENTE
 @Component({
-  // Nome utilizzato per richiamare questo componente nell'HTML.
   selector: 'app-flash-card',
-
-  // Questo componente non importa altri componenti Angular.
   imports: [],
-
-  // File HTML collegato al componente.
   templateUrl: './flash-card.html',
-
-  // File CSS collegato al componente.
   styleUrl: './flash-card.css',
 })
 export class FlashCard {
