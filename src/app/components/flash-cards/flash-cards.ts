@@ -1,5 +1,5 @@
-// Questo file contiene la logica principale delle Flash Cards. E' il componente padre e gestisce la card corrente, la navigazione Previous/Next e la percentuale di avanzamento
-// usando signal e computed.
+// Questo file contiene la logica principale delle Flash Cards.
+// E' il componente padre e gestisce la card corrente, la navigazione Previous/Next e la percentuale di avanzamento usando signal e computed.
 
 // FASE 1 - IMPORT
 import { Component, computed, inject, signal } from '@angular/core';
